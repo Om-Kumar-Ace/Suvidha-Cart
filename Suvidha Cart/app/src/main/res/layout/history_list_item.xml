@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/transaction_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date: 04 Mar 2025"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/transaction_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: ₹150.00"
+            android:textSize="14sp"
+            android:textColor="@color/blue_accent_300"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/transaction_payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paid via Credit Card"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- Expandable Section for Items -->
+        <LinearLayout
+            android:id="@+id/items_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingTop="8dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_details_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Details"
+            android:textSize="14sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

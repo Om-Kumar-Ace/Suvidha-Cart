@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "602367416144",
+    "firebase_url": "https://suvidha-cart-3468a-default-rtdb.firebaseio.com",
+    "project_id": "suvidha-cart-3468a",
+    "storage_bucket": "suvidha-cart-3468a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602367416144:android:3b3cb859cf6f3a6208be55",
+        "android_client_info": {
+          "package_name": "com.example.cart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLysQQ8s50Bep8sCUhizIYzLnBK4yAO4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

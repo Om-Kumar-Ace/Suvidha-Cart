@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Product Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/product_id_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product ID"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/product_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/product_price_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Price"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/product_quantity_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/product_image_url_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Image URL"
+        android:inputType="textUri" />
+
+    <Button
+        android:id="@+id/save_cart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Cart Item"
+        android:layout_marginTop="20dp"
+        android:padding="10dp" />
+
+</LinearLayout>

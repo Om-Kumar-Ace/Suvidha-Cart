@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Suvidha Cart</string>
+    <string name="close">Close</string>
+    <string name="add_img_item_desc">Image Item</string>
+    <string name="pro_item_price">Price: $%d</string>
+    <string name="product_detail_image_desc">Product Image</string>
+    <string name="pro_details_like_btn_desc">Like Button</string>
+    <string name="pro_details_delete_btn_desc">Remove Product Button</string>
+    <string name="plus_btn_desc">Increase Button</string>
+    <string name="minus_btn_desc">Decrease Button</string>
+    <string name="no_items_in_cart_text">No Products Added Yet!</string>
+    <string name="cart_check_out_btn">Check Out</string>
+</resources>

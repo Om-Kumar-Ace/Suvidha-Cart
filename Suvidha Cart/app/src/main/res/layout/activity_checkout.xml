@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/checkout_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: ₹0.00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Payment Method:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/payment_options_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/payment_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Credit/Debit Card" />
+
+        <RadioButton
+            android:id="@+id/payment_paypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PayPal" />
+
+        <RadioButton
+            android:id="@+id/payment_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash on Counter" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm_payment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Payment"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#00796B"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="12dp" />
+</LinearLayout>

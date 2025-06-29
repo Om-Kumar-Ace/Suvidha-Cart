@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.CartActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Budget Input and Save Button on the same row -->
+
+    <EditText
+        android:id="@+id/budget_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter Budget"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toStartOf="@id/save_budget_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <Button
+        android:id="@+id/save_budget_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:backgroundTint="#00796B"
+        android:textColor="@color/white"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/budget_edit_text" />
+
+    <include
+        android:id="@+id/loader_layout"
+        layout="@layout/layout_circular_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/budget_edit_text" />
+
+    <!-- RecyclerView for cart items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_products_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="8dp"
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/save_budget_button"
+        app:layout_constraintBottom_toTopOf="@id/total_checkout_container"
+        tools:itemCount="3"
+        tools:listitem="@layout/cart_list_item" />
+
+    <TextView
+        android:id="@+id/cart_empty_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="No items in cart"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/save_budget_button"
+        app:layout_constraintBottom_toTopOf="@id/total_checkout_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Total Amount and Checkout Button in a row -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/total_checkout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/cart_total_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total: ₹0.00"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cart_check_out_btn"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/cart_check_out_btn"
+            android:layout_width="152dp"
+            android:layout_height="49dp"
+            android:backgroundTint="#2196F3"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="12dp"
+            android:text="Checkout"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cart_total_amount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
